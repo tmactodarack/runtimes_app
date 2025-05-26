@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="row mb-4">
+    <div class="col-md-3 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>📰 Reuters Headlines</h5>
+        <p class="text-muted">The latest from Reuters.</p>
+        <div class="table-responsive">
+          {{ reuters | safe }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>📰 Reuters Summary</h5>
+        <p class="text-muted">AI-powered summary.</p>
+        {{ all_reuters_news_summary | safe }}
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5> CNBC Headlines</h5>
+        <p class="text-muted">The latest from CNBC.</p>
+        <div class="table-responsive">
+          {{cnbc | safe}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>💼 CNBC Summary</h5>
+        <p class="text-muted">AI-powered summary.</p>
+        {{all_cnbc_news_summary}}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>🔍 Search Stock</h5>
+        <form id="tickerForm">
+          <div class="mb-3">
+            <label for="ticker" class="form-label">Stock Ticker</label>
+            <input type="text" name="ticker" class="form-control" id="ticker" placeholder="e.g. AAPL" required />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Get Data</button>
+        </form>
+
+        <hr />
+
+        <h5 id="tickerHeading">📊 {{ticker}} Latest Prices</h5>
+        <div class="table-responsive" id="priceTable">
+          {{ price_data_frame | safe }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>📈 Historical Chart</h5>
+          <div class="chart-container" id="chartContainer">
+            {{ fig_html | safe }}
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>🧰 Key Statistics</h5>
+        <div class="table-responsive">
+          {{ PE | safe }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <h5>🔮 Placeholder</h5>
+        <p class="text-muted">This block is available for future content.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

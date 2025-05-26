@@ -1,0 +1,180 @@
+body {
+  font-family: 'Source Serif 4', serif;
+  background-color: #f0f2f5;
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header { /* Changed from header.bg-white */
+  background-color: #541619; /* Your new color for the header band */
+  border-bottom: none; /* Remove the bottom border if you want a solid color band */
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add a subtle shadow */
+}
+
+/* Header */
+/* Old: header.bg-white { border-bottom: 1px solid #ccc; padding: 1rem 0; } */
+header.bg-white {
+  background-color: #541619; /* Your new color for the header band */
+  border-bottom: none; /* Remove the bottom border if you want a solid color band */
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add a subtle shadow */
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+/* Old: header a.d-flex { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: #111; text-decoration: none; letter-spacing: 0.05em; } */
+header a.d-flex {
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  font-size: 2.5rem ;
+  color: #ffffff; /* Change logo text color to white */
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+/* Old: header a.d-flex:hover { color: #5a8f7b; } */
+header a.d-flex:hover {
+  color: #cccccc; /* Lighter white on hover */
+}
+/* For the SVG logo itself (if it's embedded and uses paths) */
+/* Old: header svg path { fill: #5a8f7b; } */
+header svg path {
+  fill: #ffffff; /* Change SVG icon color to white */
+}
+
+/* Navigation */
+ul.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', serif;
+}
+ul.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+ul.nav li a:hover,
+ul.nav li a.active {
+  color: #cccccc;
+  border-bottom-color:  #ffffff;
+}
+
+/* Page title */
+h1 {
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #1a1a1a; /* Keep page title outside header as dark */
+}
+
+/* Content cards */
+.p-3.border.rounded.shadow-sm {
+  border-color: #ddddddd4 !important;
+  box-shadow: none !important;
+  background: #fff;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem;
+}
+.p-3.border.rounded.shadow-sm h5 {
+  font-family: 'PMontserrat', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+  color: #111;
+}
+
+/* Table styling */
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', serif;
+  font-size: 0.9rem;
+  color: #222;
+  background-color: #ffffff9f;
+  box-shadow: none;
+  border: none;
+}
+
+.table-responsive th,
+.table-responsive td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-responsive thead th {
+  font-weight: 700;
+  font-family: 'Montserrat', serif;
+  color: #333;
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: #f9f9f9;
+}
+
+.table-responsive tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-responsive tbody td {
+  font-weight: 400;
+  color: #444;
+}
+
+.table-responsive tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* Forms */
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+input.form-control {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', serif;
+}
+button.btn-primary {
+  background-color: #5a8f7b;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+  font-family: 'Montserrat', serif;
+}
+button.btn-primary:hover {
+  background-color: #496c5a;
+}
+
+/* Chart container */
+.chart-container {
+  min-height: 300px;
+  margin-top: 1rem;
+}
+

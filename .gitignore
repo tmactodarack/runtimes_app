@@ -1,0 +1,31 @@
+# Python-specific generated files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System / IDE generated files
+.DS_Store          # macOS specific
+Thumbs.db          # Windows specific
+.vscode/           # VS Code settings
+.idea/             # IntelliJ/PyCharm settings
+
+# Anaconda / Environment specific files
+$PROFILE.txt       # Your local Anaconda profile
+.conda/            # Conda specific files if created in the root
+
+# Database files
+*.db               # Generic SQLite database files (like headlines.db)
+*.sqlite
+*.sqlite3
+
+# Virtual environment directories
+env/
+venv/
+.venv/
+
+# Specific temporary/test files you don't want to commit
+test.txt           # Your specific test.txt file
+
+# Environment variables file (if you use .env for API keys etc.)
+.env
