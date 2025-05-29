@@ -2,6 +2,7 @@ from flask import Flask
 # 1. Import your Blueprint objects
 from routes.main_routes import main_bp
 from routes.blog_routes import blog_bp
+from routes.macro_routes import macro_bp
 
 def create_app():
     """Creates and configures the Flask application."""
@@ -14,6 +15,8 @@ def create_app():
     # This means all routes in blog_bp will be prefixed with /blog
     # e.g., '/' becomes '/blog/' and '/<post_id>' becomes '/blog/<post_id>'
     app.register_blueprint(blog_bp, url_prefix='/blog')
+
+    app.register_blueprint(macro_bp, url_prefix='/macro')
 
     return app
 

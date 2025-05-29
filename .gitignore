@@ -26,6 +26,7 @@ venv/
 
 # Specific temporary/test files you don't want to commit
 test.txt           # Your specific test.txt file
+test.ipynb
 
 # Environment variables file (if you use .env for API keys etc.)
 .env

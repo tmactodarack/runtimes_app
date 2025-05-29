@@ -64,6 +64,7 @@ def get_news_summary(conn, table_name, summary_table_name):
 
     return summary_row['news'], latest_headlines_df.to_html(index=False, classes='table table-sm')
 
+
 # --- Main Routes using the Blueprint ---
 @main_bp.route('/')
 def index():
