@@ -41,15 +41,17 @@ def get_price_data(ticker):
 
 def get_key_stats(ticker):
     # ... (code for get_key_stats helper function)
-    url = f'https://finance.yahoo.com/quote/{ticker}/key-statistics'
-    response = requests.get(url, headers={'User-agent':'Mozilla/5.0 Firefox'}).text
-    tables = pd.read_html(StringIO(response))
-    stats_df = tables[0]
-    stats_df.set_index(stats_df.iloc[:,0], inplace=True)
-    stats_df.index.name = None
-    stats_df = stats_df.iloc[[0, 2, 3], 1]
-    stats_df.name = ticker
-    return pd.DataFrame(stats_df).to_html(classes='table table-striped')
+     return "<p class='text-muted'>Key statistics temporarily unavailable.</p>"
+    
+    # url = f'https://finance.yahoo.com/quote/{ticker}/key-statistics'
+    # response = requests.get(url, headers={'User-agent':'Mozilla/5.0 Firefox'}).text
+    # tables = pd.read_html(StringIO(response))
+    # stats_df = tables[0]
+    # stats_df.set_index(stats_df.iloc[:,0], inplace=True)
+    # stats_df.index.name = None
+    # stats_df = stats_df.iloc[[0, 2, 3], 1]
+    # stats_df.name = ticker
+    # return pd.DataFrame(stats_df).to_html(classes='table table-striped')
 
 def get_news_summary(conn, table_name, summary_table_name):
     # ... (code for get_news_summary helper function)
