@@ -24,6 +24,7 @@ Markdown==3.8
 MarkupSafe==3.0.2
 narwhals==1.41.0
 numpy==2.2.6
+numpy-financial==1.0.0
 openai==1.82.0
 packaging==25.0
 pandas==2.2.3

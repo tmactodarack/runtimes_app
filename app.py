@@ -12,12 +12,11 @@ def create_app():
     # 2. Register the main blueprint
     app.register_blueprint(main_bp)
 
-    # 3. Register the blog blueprint with a URL prefix
-    # This means all routes in blog_bp will be prefixed with /blog
-    # e.g., '/' becomes '/blog/' and '/<post_id>' becomes '/blog/<post_id>'
     app.register_blueprint(blog_bp, url_prefix='/blog')
 
     app.register_blueprint(macro_bp, url_prefix='/macro')
+
+    app.register_blueprint(bess_bp, url_prefix='/bess')
 
     return app
 
