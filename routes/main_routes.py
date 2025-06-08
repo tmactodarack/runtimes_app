@@ -83,7 +83,8 @@ def index():
 @main_bp.route('/get_stock')
 def get_stock():
     ticker = request.args.get("ticker", "NVDA").upper()
-
+    print(f"DEBUG: Flask received ticker: {ticker}")
+    
     # === Fetch price data ===
     url = 'https://api.twelvedata.com/time_series'
     params = {
