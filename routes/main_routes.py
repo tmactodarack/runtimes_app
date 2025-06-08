@@ -82,9 +82,19 @@ def index():
 
 @main_bp.route('/get_stock')
 def get_stock():
-    ticker = request.args.get("ticker", "NVDA").upper()
-    print(f"DEBUG: Flask received ticker: {ticker}")
     
+    print(f"DEBUG: Full request.args: {request.args}")
+
+    # Try to get the ticker without a default first, then fall back
+    raw_ticker = request.args.get("ticker")
+    if raw_ticker is None:
+        ticker = "NVDA" # Explicitly default if not found
+        print(f"DEBUG: Ticker parameter NOT found in request.args. Defaulting to: {ticker}")
+    else:
+        ticker = raw_ticker.upper()
+        print(f"DEBUG: Ticker parameter found and set to: {ticker}")
+
+
     # === Fetch price data ===
     url = 'https://api.twelvedata.com/time_series'
     params = {
